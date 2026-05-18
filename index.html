@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Tennis</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- MediaPipe Hands (CDN). Tasks Vision is the current API. -->
+  <script type="module" src="game.js"></script>
+</head>
+<body>
+  <div id="root">
+    <div id="hud">
+      <div class="score"><span id="leftScore">0</span></div>
+      <div class="title">HAND TENNIS</div>
+      <div class="score"><span id="rightScore">0</span></div>
+    </div>
+
+    <div id="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="game"></canvas>
+      <div id="status">Loading camera & hand model…</div>
+    </div>
+
+    <div id="footer">
+      <span class="hint">Left hand → left paddle &nbsp; • &nbsp; Right hand → right paddle</span>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+</body>
+</html>
